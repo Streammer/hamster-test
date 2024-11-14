@@ -1,0 +1,2 @@
+# hamster-test
+test task
