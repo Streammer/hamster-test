@@ -1,6 +1,8 @@
 <template>
     <button class="button-claim">
-        <div class="button-claim__text">claim all</div>
+        <div class="button-claim__text">
+            <slot></slot>
+        </div>
     </button>
 </template>
 <style scoped>
@@ -33,6 +35,7 @@
     background: linear-gradient(180deg, #48A9EC 0%, #2875B9 100%);
     box-shadow: 0px 2px 0px 0px #BEE3FF inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px -2px 0px 0px #155388 inset;
     position: relative;
+    min-width: 134px;
 }
 .button-claim::before {
     content: "";

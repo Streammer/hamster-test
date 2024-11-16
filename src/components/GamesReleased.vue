@@ -1,7 +1,7 @@
 <template>
     <div class="games-released">
         <ReleasedList/>
-        <Button @click="openCloseModal"/>
+        <Button @click="openCloseModal">claim all </Button>
         <Modal v-if="isOpen" @close="openCloseModal"/>
     </div>
 </template>
