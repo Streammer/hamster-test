@@ -11,7 +11,7 @@
     color: #FFF;
     text-align: center;
     text-shadow: 0px 0.5px 0px #1F1F1F;
-    -webkit-text-stroke-width: 0.5;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: var(--Button-stroke, #1F1F1F);
     font-family: "Movavi Grotesque";
     font-size: 14px;

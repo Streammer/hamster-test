@@ -154,7 +154,9 @@ const formatNumber = (value) => {
     align-items: center;
     gap: 4px;
     justify-self: flex-start;
-    padding-left: 14px;
+    padding-left: 12px;
+    border-right: 1px solid rgba(54, 91, 142, 0.3)
+
 }
 
 .released-list__awards-title {
@@ -183,7 +185,7 @@ const formatNumber = (value) => {
 .released-list__points {
     color: #FFF;
     text-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.50);
-    -webkit-text-stroke-width: 0.5;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: var(--stroke-counter, #000);
     font-family: "Movavi Grotesque";
     font-size: 12px;
@@ -194,5 +196,6 @@ const formatNumber = (value) => {
 .released-list__points {
     justify-self: flex-start;
     margin-left: auto;
+    align-self: center;
 }
 </style>

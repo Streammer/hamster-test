@@ -1,8 +1,9 @@
 <template>
     <div class="games-released">
-        <ReleasedList/>
+        <h1 class="games-released__title">Games Released</h1>
+        <ReleasedList />
         <Button @click="openCloseModal">claim all </Button>
-        <Modal v-if="isOpen" @close="openCloseModal"/>
+        <Modal v-if="isOpen" @close="openCloseModal" />
     </div>
 </template>
 <script setup>
@@ -33,6 +34,7 @@ const openCloseModal = () => {
 .games-released__title {
     color: #FFF;
     text-align: center;
+    font-family: "Movavi Grotesque";
     font-size: 20px;
     font-style: normal;
     font-weight: 900;

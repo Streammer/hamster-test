@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="modal__bonus">
-                    <div class="modal__fan-bonus--title">Fan Bonus</div>
+                    <div class="modal__fan-bonus--title yellow">fan Bonus</div>
                     <div class="modal__fan-bonus--content">
                         <div class="modal__fan-bonus--item">
                             <img src="../assets/medal.svg" alt="">
@@ -36,11 +36,11 @@
                     </div>
                 </div>
                 <div class="modal__bonus">
-                    <div class="modal__fan-bonus--title">total reward</div>
+                    <div class="modal__fan-bonus--title blue">total reward</div>
                     <div class="modal__fan-bonus--content">
-                        <div class="modal__fan-bonus--item">
+                        <div class="modal__fan-bonus--item tall">
                             <img src="../assets/medal.svg" alt="">
-                            <span>150</span>
+                            <span>399</span>
                         </div>
                         <div class="modal__fan-bonus--item">
                             <span>120.5k</span> 
@@ -72,7 +72,7 @@ const openCloseModal = () => {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.90);
+    background: rgba(0, 0, 0, 0.85);
     z-index: 2;
     cursor: pointer;
     display: flex;
@@ -119,8 +119,10 @@ const openCloseModal = () => {
 }
 
 .modal-experience__item {
-    width: 43px;
-    height: 43px;
+    min-width: 43px;
+    width: 100%;
+    padding-top: 100%;
+    height: auto;
     border-radius: 8px;
     background: radial-gradient(196.11% 271.57% at 50% -171.57%, #336097 0%, #1D2948 100%);
 }
@@ -162,7 +164,7 @@ const openCloseModal = () => {
 }
 
 .modal__fan-bonus--title {
-    color: #F3C209;
+
     text-shadow: 0px 0.579px 0px #000;
     -webkit-text-stroke-width: 0.28973597288131714;
     -webkit-text-stroke-color: var(--stroke-counter, #000);
@@ -174,10 +176,17 @@ const openCloseModal = () => {
     text-transform: uppercase;
     text-align: center;
 }
+.modal__fan-bonus--title.yellow {
+    color: #F3C209;
+}
+.modal__fan-bonus--title.blue {
+    color: #A8DEFD;
+}
 
 .modal__fan-bonus--content {
     display: flex;
     gap: 24px;
+    padding: 4px 0;
     background: linear-gradient(90deg, rgba(32, 94, 170, 0.00) -8.33%, rgba(31, 89, 132, 0.50) 43.52%, rgba(31, 89, 132, 0.50) 63.78%, rgba(32, 94, 170, 0.00) 110.86%);
 }
 
@@ -187,12 +196,17 @@ const openCloseModal = () => {
     gap: 4px;
     align-items: center;
     justify-content: center;
+    min-height: 32px;
+}
+
+.modal__fan-bonus--item.tall {
+    min-height: 39px;
 }
 
 .modal__fan-bonus--item > span {
     color: #FFF;
     text-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.50);
-    -webkit-text-stroke-width: 0.5;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: var(--stroke-counter, #000);
     font-family: "Movavi Grotesque";
     font-size: 16px;

@@ -1,5 +1,12 @@
 @import './base.css';
 
+@font-face {
+  font-family: 'Movavi Grotesque';
+  src: url('./fonts/Movavi-Grotesque-Black.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
