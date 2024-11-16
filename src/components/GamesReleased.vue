@@ -1,14 +1,20 @@
 <template>
     <div class="games-released">
         <ReleasedList/>
-        <Button />
+        <Button @click="openCloseModal"/>
+        <Modal v-if="isOpen" @close="openCloseModal"/>
     </div>
 </template>
 <script setup>
-import { defineOptions } from 'vue';
+import { defineOptions, ref } from 'vue';
 import ReleasedList from './ReleasedList.vue';
 import Button from './Button.vue';
+import Modal from './Modal.vue';
 defineOptions({ name: 'GamesReleased' });
+const isOpen = ref(false);
+const openCloseModal = () => {
+    isOpen.value = !isOpen.value
+}
 </script>
 <style scoped>
 .games-released {
@@ -21,6 +27,7 @@ defineOptions({ name: 'GamesReleased' });
     background: linear-gradient(180deg, #2361A8 0%, #224378 132.67%);
     width: 100%;
     min-height: 640px;
+    position: relative;
 }
 
 .games-released__title {

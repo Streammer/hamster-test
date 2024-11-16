@@ -56,7 +56,7 @@ const formatNumber = (value) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 41px;
+    padding-left: 42px;
     width: 100%;
 }
 
@@ -86,7 +86,7 @@ const formatNumber = (value) => {
     align-items: center;
     width: 100%;
     overflow-y: auto;
-    padding-right: 41px;
+    padding-right: 42px;
     box-sizing: content-box;
 }
 
