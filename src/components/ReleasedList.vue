@@ -8,14 +8,14 @@
                         <span class="released-list__awards-title">REWARD</span>
                         <div v-if="item.reward.medals" class="released-list__points-values">
                             <img src="@/assets/medal.svg" alt="medal icon">
-                            <span class="released-list__medals">{{ item.reward.medals }}</span>
+                            <span class="released-list__medals">{{ formatNumber(item.reward.medals) }}</span>
                         </div>
                         <span class="released-list__points">{{ formatNumber(item.reward.points) }}</span>
                         <span class="released-list__awards-title" :class="item.funBonus.medals ? 'orange' : 'red'">FUN
                             BONUS</span>
                         <div v-if="item.funBonus.medals" class="released-list__points-values">
                             <img src="@/assets/medal.svg" alt="medal icon">
-                            <span class="released-list__medals">{{ item.funBonus.medals }}</span>
+                            <span class="released-list__medals">{{ formatNumber(item.funBonus.medals) }}</span>
                         </div>
                         <span class="released-list__points">{{ formatNumber(item.funBonus.points) }}</span>
                     </div>
@@ -146,6 +146,7 @@ const formatNumber = (value) => {
     margin-left: auto;
     display: grid;
     grid-template-columns: minmax(max-content, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 7px;
 }
 
 .released-list__points-values {
@@ -153,7 +154,7 @@ const formatNumber = (value) => {
     align-items: center;
     gap: 4px;
     justify-self: flex-start;
-    padding-left: 20px;
+    padding-left: 14px;
 }
 
 .released-list__awards-title {

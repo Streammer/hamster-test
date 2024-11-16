@@ -1,11 +1,13 @@
 <template>
     <div class="games-released">
         <ReleasedList/>
+        <Button />
     </div>
 </template>
 <script setup>
 import { defineOptions } from 'vue';
 import ReleasedList from './ReleasedList.vue';
+import Button from './Button.vue';
 defineOptions({ name: 'GamesReleased' });
 </script>
 <style scoped>
@@ -15,7 +17,7 @@ defineOptions({ name: 'GamesReleased' });
     padding: 36px 19px 24px 19px;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
     background: linear-gradient(180deg, #2361A8 0%, #224378 132.67%);
     width: 100%;
     min-height: 640px;
