@@ -6,19 +6,19 @@
                 <div class="modal-experience">
                     <div class="modal-experience__wrap">
                         <div class="modal-experience__item green">
-                            <img src="" alt="">
+                            <img class="modal-experience__img" src="../assets/img/mouse.png" alt="">
                         </div>
                         <span>+500xp</span>
                     </div>
                     <div class="modal-experience__wrap">
                         <div class="modal-experience__item purple">
-                            <img src="" alt="">
+                            <img class="modal-experience__img" src="../assets/img/mousef.png" alt="">
                         </div>
                         <span>+500xp</span>
                     </div>
                     <div class="modal-experience__wrap">
                         <div class="modal-experience__item blue">
-                            <img src="" alt="">
+                            <img class="modal-experience__img" src="../assets/img/mouses.png" alt="">
                         </div>
                         <span>+500xp</span>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="modal__fan-bonus--title yellow">fan Bonus</div>
                     <div class="modal__fan-bonus--content">
                         <div class="modal__fan-bonus--item">
-                            <img src="../assets/medal.svg" alt="">
+                            <img class="modal-experience__img" src="../assets/medal.svg" alt="">
                             <span>150</span>
                         </div>
                         <div class="modal__fan-bonus--item">
@@ -39,7 +39,7 @@
                     <div class="modal__fan-bonus--title blue">total reward</div>
                     <div class="modal__fan-bonus--content">
                         <div class="modal__fan-bonus--item tall">
-                            <img src="../assets/medal.svg" alt="">
+                            <img class="modal-experience__img" src="../assets/medal.svg" alt="">
                             <span>399</span>
                         </div>
                         <div class="modal__fan-bonus--item">
@@ -121,10 +121,10 @@ const openCloseModal = () => {
 .modal-experience__item {
     min-width: 43px;
     width: 100%;
-    padding-top: 100%;
     height: auto;
     border-radius: 8px;
     background: radial-gradient(196.11% 271.57% at 50% -171.57%, #336097 0%, #1D2948 100%);
+    display: flex;
 }
 
 .modal-experience__item.green {
@@ -164,7 +164,6 @@ const openCloseModal = () => {
 }
 
 .modal__fan-bonus--title {
-
     text-shadow: 0px 0.579px 0px #000;
     -webkit-text-stroke-width: 0.28973597288131714;
     -webkit-text-stroke-color: var(--stroke-counter, #000);
@@ -213,5 +212,11 @@ const openCloseModal = () => {
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+}
+.modal-experience__img {
+    width: 100%;
+    max-width: 43px;
+    object-fit: cover;
+    margin: auto;
 }
 </style>

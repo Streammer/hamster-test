@@ -3,7 +3,10 @@
         <div class="released-list__content">
             <div class="released-list">
                 <div v-for="item in data" :key="item.id" class="released-list__item">
-                    <div class="released-list__name">{{ item.name }}</div>
+                    <div class="released-list__img-wrapper">
+                        <img src="@/assets/img/rect.jpeg" alt="rect" class="released-list__img">
+                        <div class="released-list__name">{{ item.name }}</div>
+                    </div>
                     <div class="released-list__awards">
                         <span class="released-list__awards-title">REWARD</span>
                         <div v-if="item.reward.medals" class="released-list__points-values">
@@ -101,7 +104,6 @@ const formatNumber = (value) => {
 
 .released-list__name {
     min-width: max-content;
-    width: 20%;
     color: #FFF;
     text-shadow: 0px 0.579px 0px #000;
     -webkit-text-stroke-width: 0.28973597288131714;
@@ -112,7 +114,6 @@ const formatNumber = (value) => {
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
-    align-self: flex-end;
 }
 
 .released-list__reward,
@@ -196,6 +197,16 @@ const formatNumber = (value) => {
 .released-list__points {
     justify-self: flex-start;
     margin-left: auto;
-    align-self: center;
+    align-self: center;    
+}
+.released-list__img-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.released-list__img {
+    border-radius: 6px;
 }
 </style>
