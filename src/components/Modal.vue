@@ -119,12 +119,12 @@ const openCloseModal = () => {
 }
 
 .modal-experience__item {
-    min-width: 43px;
-    width: 100%;
-    height: auto;
+    width: 43px;
+    height: 43px;
     border-radius: 8px;
     background: radial-gradient(196.11% 271.57% at 50% -171.57%, #336097 0%, #1D2948 100%);
     display: flex;
+    overflow: hidden;
 }
 
 .modal-experience__item.green {
@@ -143,6 +143,7 @@ const openCloseModal = () => {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    align-items: center;
 }
 
 .modal-experience__wrap>span {
