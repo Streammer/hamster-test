@@ -1,10 +1,15 @@
 <template>
     <button class="button-claim">
-        <div class="button-claim__text">
+        <div class="button-claim__text" :class="{ 'button-claim__text--large': large }">
             <slot></slot>
         </div>
     </button>
 </template>
+<script setup>
+const props = defineProps({
+    large: { type: Boolean, default: false }
+})
+</script>
 <style scoped>
 .button-claim__text {
     text-transform: uppercase;
@@ -17,8 +22,8 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 900;
-    line-height: 16px;
     text-transform: uppercase;
+    margin: auto;
 }
 
 .button-claim {
@@ -47,5 +52,8 @@
     background-size: cover;
     width: 8px;
     height: 5px;
+}
+.button-claim__text--large {
+    font-size: 20px;
 }
 </style>

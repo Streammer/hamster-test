@@ -1,7 +1,9 @@
 <template>
     <div class="modal" @click="handleClick">
         <div class="modal__content" @click.stop>
-            <div class="modal__top">CONGRATULATIONS!</div>
+            <div class="modal__top">
+                <span>CONGRATULATIONS!</span>
+            </div>
             <div class="modal__bottom">
                 <div class="modal-experience">
                     <div class="modal-experience__wrap">
@@ -48,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <Button @click="openCloseModal">ok</Button>
+            <Button @click="openCloseModal" :large="true">ok</Button>
         </div>
     </div>
 </template>
@@ -100,6 +102,7 @@ const openCloseModal = () => {
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
+    padding-top: 4px;
     background: linear-gradient(90deg, rgba(243, 194, 9, 0.00) 0%, #F3C209 24%, #F3C209 70%, rgba(243, 194, 9, 0.00) 100%);
 }
 
